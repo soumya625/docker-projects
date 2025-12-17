@@ -1,5 +1,5 @@
-FROM python:3.9
+FROM python:3.11-slim
 WORKDIR /app
-COPY . .
-RUN pip install flask
+COPY app.py .
+RUN pip install --no-cache-dir flask
 CMD ["python", "app.py"]
